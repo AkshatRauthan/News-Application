@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.856);
     color : #fff;
     display : flex;
     flex-direction: column;
@@ -35,19 +35,19 @@ footer {
 article {
     display : flex;
     margin-bottom : 20px;
-    background-color: #E5E7EB;
+    background-color:rgba(0, 0, 0, 0.092);
     padding : 10px;
     transition: background-color 500ms linear;
 }
 
 article:hover {
-    background-color: #6a6666;
+    background-color:grey;
 }
 
 .article-image {
     height : 120px;
     width: 200px;
-    border-radius : 5%;
+    border-radius : 10%;
     border-color: black;
 }
 
@@ -79,7 +79,7 @@ article:hover {
     margin : 0 10px;
     color :#dfe1e7;
     text-decoration: none;
-    background-color: orange;
+    background-color: rgba(108, 110, 231, 0.387);
     transition: background-color 400ms linear;
     border-radius: 5px;
 }
@@ -88,7 +88,7 @@ article:hover {
     padding: 10px 20px;
     margin : 0 10px;
     color :#dfe1e7;
-    background-color: red;
+    background-color: gray;
     text-decoration: none;
     border-radius: 5px;
 }
