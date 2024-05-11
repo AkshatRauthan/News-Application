@@ -55,7 +55,7 @@ function run(){
                 <p>
                     ${data[i].description}
                 </p>
-                <p class = "article-author>
+                <p class = "article-author">
                     Article Author : ${data[i].author}
                 </p>
             </div>
