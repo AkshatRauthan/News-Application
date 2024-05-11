@@ -11,6 +11,14 @@ header {
     flex-direction: column;
 }
 
+.auth-pairs {
+    display: flex;
+    padding: 10px;
+    padding-bottom: 0;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
 .navbar ul {
     list-style-type: none;
     padding : 10px;
@@ -55,6 +63,11 @@ article:hover {
     padding: 5px;
 }
 
+.anchor-article {
+    color: black;
+    text-decoration: none;
+}
+
 .anchor-element {
     color:#fff;
     text-decoration: none;
@@ -62,20 +75,19 @@ article:hover {
 
 .header-content {
     display:flex;
-    align-items: inline;
     align-items: center;
     justify-content: space-between;
 }
 
 .auth-buttons {
     display:flex;
-    align-items: inline;
-    align-items: center;
+    flex-direction: column;
+    align-items: end;
     justify-content: space-between;
 }
 
 .auth-elements{
-    padding: 10px 20px;
+    padding: 10px 10px 10px 10px;
     margin : 0 10px;
     color :#dfe1e7;
     text-decoration: none;
@@ -85,7 +97,6 @@ article:hover {
 }
 
 .auth-elements:hover {
-    padding: 10px 20px;
     margin : 0 10px;
     color :#dfe1e7;
     background-color: gray;
@@ -94,10 +105,16 @@ article:hover {
 }
 
 .title {
-    padding : 0px 10px;
+    padding : 0px 5px 0px 25px;
 }
-/* 
-.anchor-article {
-    text-decoration: none;
-    color:black;
-} */
+
+.article-author {
+    text-align: left;
+}
+
+#footer {
+    padding-bottom: 15px;
+    height: 40px; 
+    background-color:rgb(41, 38, 38);
+    color: white;
+}

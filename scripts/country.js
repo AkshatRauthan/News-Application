@@ -1,0 +1,63 @@
+let country = {
+    "Argentina" : "ar", "Greece" : "gr", "Argentina" : "ar", "Australia" : "au",
+    "Austria" : "at" ,"Belgium " : "be", "Brazil" : "br", "Bulgaria" : "bg",
+    "Canada" : "ca", "China" : "cn", "Colombia" : "co", "Cuba" : "cu",
+    "Czech Republic" : "cz", "Egypt" : "eg", "France" : "fr", "Germany" : "de",
+    "Greec" : "gr", "Hong Kong" : "hk", "Hungary" : "hu", "India" : "in", "Indonesia" : "id",
+    "Ireland" : "ie", "Israel" : "il", "Italy" : "it", "Japan" : "jp", "Latvia" : "lv",
+    "Lithuania" : "lt", "Malaysia" : "my", "Mexico" : "mx", "Morocco" : "ma", 
+    "South Africa" : "za","South Korea" : "kr","Sweden" : "se","Switzerland " : "ch",
+    "Taiwan" : "tw","Thailand" : "th","Turkey" : "tr","UAE" : "ae","Ukraine" : "ua","United Kingdom" : "gb",
+    "United States" : "us","Venuzuela" : "ve", "Russia" : "ru", 
+}
+
+let currRegion, data, n;
+let main = document.getElementById("article-container");
+const button = document.getElementById("change-region");
+region = prompt("Enter The Name Of The Country You Want To Get News From : ");
+if (country[region] == undefined){
+    alert("News From The Required Region Is Not Available.");
+    alert("Please Select A Diffrent Region.");
+    changeRegion();
+}
+else{
+    alert("Region Is Succesfully Changed.");
+    currRegion = country[region];
+}
+
+console.log(country[region]);
+console.log(currRegion);
+
+async function getData(){
+    let api = `https://newsapi.org/v2/top-headlines?country=${currRegion}&apiKey=7e7e71e96fab4315835bf13e26e68662`
+    const res = await fetch(`${api}`);
+    const result = await res.json();
+    data = result.articles;
+    n = data.length;
+    console.log(data);
+    renderUI();
+}
+
+function renderUI(){
+    for (let i=0; i<n; i++){
+        const article = document.createElement('article');
+        // if (data[i].title == '[Removed]' || data[i].description == null) continue;
+        article.innerHTML = `
+        <img class = "article-image" src = "${data[i].urlToImage}" alt = "Image Not Available." onerror="this.src='images/noImage.webp'">
+        <div class="article-content">
+            <h2>
+                ${data[i].title}
+            </h2>
+            <p>
+                ${data[i].description}
+            </p>
+            <b>
+                <a class = "anchor-article" href = "${data[i].url}" target = "_blank" >Read More...</a>
+            </b>
+        </div>
+        `;
+        main.appendChild(article);
+    }
+}
+
+getData();

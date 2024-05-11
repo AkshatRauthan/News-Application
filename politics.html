@@ -7,29 +7,41 @@
     <link rel="stylesheet" type = "text/css" href="index.css">
 </head>
 <body>
+    
     <header>
+
         <div class = "header-content">
-            <h1 class = "title">News App</h1>
-            <div class="auth-buttons">
-                <a class = "auth-elements" href="#">Sign In</a>
-                <a class = "auth-elements" href="#">Sign Out</a>
+            <div class="auth-align">
+                <h1 class = "title">News App</h1>
+
+                <nav class = "navbar">
+                    <ul>
+                        <li><a class = "anchor-element" href="index.html">Home</a></li>
+                        <li><a class = "anchor-element" href="world.html">World</a></li>
+                        <li><a class = "anchor-element" href="politics.html">Politics</a></li>
+                        <li><a class = "anchor-element" href="technology.html">Technology</a></li>
+                        <li><a class = "anchor-element" href="entertainment.html">Entertainment</a></li>
+                    </ul>
+                </nav>
             </div>
+    
+            <div class="auth-buttons">
+                <div id = "change-country" class = "auth-pairs">
+                    <a class = "auth-elements" id = "change-region" href="#">Select Source Region</a>      
+                </div>
+                <div class = "auth-pairs">
+                    <a class = "auth-elements" href="#">Sign In</a>
+                    <a class = "auth-elements" href="#">Sign Out</a>
+                </div>
+            </div>
+
         </div>
-        <nar class = "navbar">
-            <ul>
-                <li><a class = "anchor-element" href="index.html">Home</a></li>
-                <li><a class = "anchor-element" href="world.html">World</a></li>
-                <li><a class = "anchor-element" href="politics.html">Politics</a></li>
-                <li><a class = "anchor-element" href="technology.html">Technology</a></li>
-                <li><a class = "anchor-element" href="entertainment.html">Entertainment</a></li>
-            </ul>
-        </nar>
+
+
     </header>
 
-    <main>
-        <p>
-            This Is The Political News Section.
-        </p>
+    <main id = "article-container">
+        <script src = "scripts/politics.js"></script>
     </main>
 
     <footer>
